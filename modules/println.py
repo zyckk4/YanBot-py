@@ -27,9 +27,9 @@ async def println(app: Ariadne, group: Group, event: GroupMessage):
         disable=0
         await app.send_message(group,MessageChain(At(event.sender.id)," 已全局启用println模块"),
     
-    )    
+    )
     else:
-         await app.send_message(group,MessageChain(At(event.sender.id)," 抱歉亲爱的，你的权限不足")),                                            
+         await app.send_message(group,MessageChain(At(event.sender.id)," 抱歉亲爱的，你的权限不足")),
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
